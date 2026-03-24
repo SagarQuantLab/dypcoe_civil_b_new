@@ -27,3 +27,10 @@ print(my_dict.values())
 # access keys and value
 print(my_dict.items())
 
+############################################################
+# ITEMS     SYMBOL      ORDERED     ACCESS      DUPLICATES      MUTABLE
+# LIST        []           Y         Index         Y                Y
+# DICT        {}           Y         Keys          N                Y
+# TUPLE       ()           Y         Index         Y                N
+# SETS        {}           N         -             N                N
+
