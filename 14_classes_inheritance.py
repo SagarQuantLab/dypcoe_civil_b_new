@@ -1,3 +1,11 @@
+class mummy:
+
+    def __init__(self, car, salary):
+        self.car = car
+        self.salary = salary
+
+    def _get_mummys_car(self):
+        return "You can drive my car - Mummy"
 class grandpa:
 
     def __init__(self, car, pension):
@@ -22,16 +30,31 @@ class papa(grandpa):
     def _get_papa_pension_details(self):
         return self.__get_grandpa_pension_details()
     
-class son(papa):
+# class son(papa):
+
+#     def __init__(self, car, papa_salary):
+#         papa.__init__(self, car, papa_salary)
+
+#     def get_grandpa_car(self):
+#         return self._get_papa_car()
+    
+#     def get_grandpa_pension(self):
+#         return self._get_papa_pension_details()
+
+class son(papa, mummy):
 
     def __init__(self, car, papa_salary):
         papa.__init__(self, car, papa_salary)
+        mummy.__init__(self, car, papa_salary)
 
     def get_grandpa_car(self):
         return self._get_papa_car()
     
     def get_grandpa_pension(self):
         return self._get_papa_pension_details()
+    
+    def get_mummy_car(self):
+        return self._get_mummys_car()
     
 # grandpaIns = grandpa('Swift', 50000)
 # print(grandpaIns._get_granpa_car_details())
@@ -43,4 +66,5 @@ class son(papa):
 
 sonIns = son("Swift", 100000)
 print(sonIns.get_grandpa_car())
-print(sonIns.get_grandpa_pension())
+# print(sonIns.get_grandpa_pension())
+print(sonIns.get_mummy_car())
